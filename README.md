@@ -1,6 +1,6 @@
 # github-spectrum
 
-The `github-spectrum` function finds color codes for any Github language (according to [Github Linguist](https://github.com/github/linguist)) in any format provided by [color2color](http://metaloha.github.io/color2color/).
+The `github-spectrum` function finds color codes for any Github language (according to [Github Linguist](https://github.com/github/linguist)) in any format provided by [colorcolor](http://metaloha.github.io/color2color/).
 
 ## Install
 
@@ -19,7 +19,7 @@ var color = spectrum(
 	// optional, defaults to 'hex'
 	type,
 
-	// used by color2color when `type` contains an alpha: ('rgba', 'hexa', 'hsla')
+	// used by colorcolor when `type` contains an alpha: ('rgba', 'hexa', 'hsla')
 	// optional, defaults to false
 	calculateOpacity
 );
@@ -28,9 +28,9 @@ var color = spectrum(
 ## Examples
 
 ```javascript
-spectrum('js') 						   // ''
-spectrum('JavaScript') 				   // '#f1e05a'
-spectrum('JavaScript', 'rgba') 		   // 'rgba(241,224,90,1)'
+spectrum('js')                         // ''
+spectrum('JavaScript')                 // '#f1e05a'
+spectrum('JavaScript', 'rgba')         // 'rgba(241,224,90,1)'
 spectrum('JavaScript', 'rgba', true)   // 'rgba(233,207,0,0.6471)'
 ```
 
