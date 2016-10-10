@@ -1,0 +1,26 @@
+{
+  "name": "github-spectrum",
+  "version": "1.0.0",
+  "description": "colors from `github/linguist` in many formats",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "install": "npm run build"
+  },
+  "keywords": [
+    "color",
+    "linguist",
+    "github",
+    "rgba",
+    "hex",
+    "rgb",
+    "hsl",
+    "language"
+  ],
+  "author": "dzhurley",
+  "license": "MIT",
+  "dependencies": {
+    "colorcolor": "^1.1.1",
+    "js-yaml": "^3.6.1"
+  }
+}
