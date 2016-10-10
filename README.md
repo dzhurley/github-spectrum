@@ -33,3 +33,18 @@ spectrum('JavaScript') 				   // '#f1e05a'
 spectrum('JavaScript', 'rgba') 		   // 'rgba(241,224,90,1)'
 spectrum('JavaScript', 'rgba', true)   // 'rgba(233,207,0,0.6471)'
 ```
+
+## webpack users:
+
+As `github-spectrum` relies on loading a JSON file with `require()`, webpack setups need to include the [json-loader](https://github.com/webpack/json-loader). One way is to include it in the `preLoaders`:
+
+```javascript
+...
+preLoaders: [
+    {
+        test: /.json$/,
+        loader: 'json'
+    }
+]
+...
+```
