@@ -1,7 +1,7 @@
 {
   "name": "github-spectrum",
-  "version": "1.0.5",
-  "description": "colors from `github/linguist` in many formats",
+  "version": "1.1.0",
+  "description": "colors from `github/linguist` in hex or rgba",
   "main": "index.js",
   "repository": {
       "type": "git",
@@ -17,14 +17,12 @@
     "github",
     "rgba",
     "hex",
-    "rgb",
-    "hsl",
     "language"
   ],
   "author": "dzhurley",
   "license": "MIT",
   "dependencies": {
-    "colorcolor": "^1.1.1",
+    "hex-and-rgba": "^1.1.0",
     "js-yaml": "^3.6.1"
   }
 }

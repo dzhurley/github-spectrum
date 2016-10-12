@@ -1,6 +1,6 @@
 # github-spectrum
 
-The `github-spectrum` function finds color codes for any Github language (according to [Github Linguist](https://github.com/github/linguist)) in any format provided by [colorcolor](http://metaloha.github.io/color2color/).
+The `github-spectrum` function finds color codes for any Github language (according to [Github Linguist](https://github.com/github/linguist)) in either their native HEX format or RGBA
 
 ## Install
 
@@ -15,13 +15,8 @@ var color = spectrum(
 	// e.g. 'JavaScript'
 	languageName,
 
-	// ('rgba', 'hex', 'hexa', 'rgb', 'hsl', 'hsla', 'hsv')
-	// optional, defaults to 'hex'
-	type,
-
-	// used by colorcolor when `type` contains an alpha: ('rgba', 'hexa', 'hsla')
-	// optional, defaults to false
-	calculateOpacity
+    // 'rgba' or 'hex', defaults to 'hex'
+	type
 );
 ```
 
@@ -31,7 +26,6 @@ var color = spectrum(
 spectrum('js')                         // ''
 spectrum('JavaScript')                 // '#f1e05a'
 spectrum('JavaScript', 'rgba')         // 'rgba(241,224,90,1)'
-spectrum('JavaScript', 'rgba', true)   // 'rgba(233,207,0,0.6471)'
 ```
 
 ## Gotchas:
@@ -49,6 +43,3 @@ preLoaders: [
 ]
 ...
 ```
-
-### safari
-[colorcolor](http://metaloha.github.io/color2color/) doesn't support Safari so neither does `github-spectrum`. A [pull request](https://github.com/metaloha/color2color/pull/13) is currently open to remedy this.
