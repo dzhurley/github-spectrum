@@ -6,10 +6,8 @@ var rgbaString = function(rgbaArray) {
 };
 
 module.exports = function(language, type) {
-    if (!(language in spectrum)) {
-        return '';
-    }
-    return type === 'rgba' ?
-        rgbaString(hexToRgba(spectrum[language])) :
-        spectrum[language];
+    var lowerLang = language.toLowerCase();
+    // github repo pages default languages to #ccc
+    var color = lowerLang in spectrum ? spectrum[lowerLang] : '#cccccc';
+    return type === 'rgba' ? rgbaString(hexToRgba(color)) : color;
 };

@@ -9,7 +9,10 @@ var handle = function(body) {
             return json[lang].color;
         })
         .reduce(function(mapping, lang) {
-            mapping[lang] = json[lang].color;
+            mapping[lang.toLowerCase()] = json[lang].color;
+            (json[lang].aliases || []).forEach(alias => {
+                mapping[alias.toLowerCase()] = json[lang].color;
+            });
             return mapping;
         }, {});
     fs.writeFile(__dirname + '/spectrum.json', JSON.stringify(mapping));

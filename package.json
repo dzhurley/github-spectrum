@@ -1,6 +1,6 @@
 {
   "name": "github-spectrum",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "colors from `github/linguist` in hex or rgba",
   "main": "index.js",
   "repository": {
